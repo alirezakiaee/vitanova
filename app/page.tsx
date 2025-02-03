@@ -26,18 +26,18 @@ export default function Home() {
                   <BeakerIcon className="h-6 w-6 text-primary-600" />
                 </div>
               </div>
-              <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
+              <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-6xl">
                 Beyond
                 <span className="relative whitespace-nowrap">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 418 42"
-                    className="absolute left-0 top-2/3 h-[0.58em] w-full fill-primary-500/60"
+                    className="absolute left-0 top-2/3 h-[0.58em] w-full fill-primary-300/70"
                     preserveAspectRatio="none"
                   >
                     <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z" />
                   </svg>
-                  <span className="relative"> Traditional </span>
+                  <span className="relative">Traditional</span>
                 </span>
                 <span className="mt-4 block bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
                   Healthcare
@@ -47,37 +47,102 @@ export default function Home() {
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Pioneering the future of healthcare through innovative pharmaceutical solutions. Our commitment drives breakthrough medicines that transform lives.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-              <Link
-                href="/products"
-                className="inline-flex items-center rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-500 hover:shadow-lg hover:shadow-primary-500/30"
-              >
-                Discover Our Solutions
-              </Link>
-              <Link 
-                href="/about" 
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-gray-900"
-              >
-                Learn more 
-                <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+
+            {/* Modern Glass Cards */}
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Clinical Trials Card */}
+              <div className="group bg-white/95 backdrop-blur-md rounded-3xl p-7 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center justify-between mb-7">
+                  <div className="h-13 w-13 rounded-2xl bg-blue-50 flex items-center justify-center p-3">
+                    <BeakerIcon className="h-7 w-7 text-blue-600" />
+                  </div>
+                  <span className="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-medium">
+                    Phase 3 Progress
+                  </span>
+                </div>
+
+                <div className="space-y-7">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Clinical Trials</h3>
+                    <p className="text-6xl font-bold text-blue-600 mt-3">24+</p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600 font-medium">Progress</span>
+                      <span className="text-blue-600 font-medium">75%</span>
+                    </div>
+                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <div className="h-full w-3/4 bg-blue-500 rounded-full transition-all duration-500 group-hover:bg-blue-600" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-7 pt-6 border-t border-gray-100">
+                  <Link 
+                    href="/trials" 
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors group"
+                  >
+                    View Trial Portfolio
+                    <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Patient Impact Card */}
+              <div className="group bg-white/95 backdrop-blur-md rounded-3xl p-7 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center justify-between mb-7">
+                  <div className="h-13 w-13 rounded-2xl bg-sky-50 flex items-center justify-center p-3">
+                    <UserGroupIcon className="h-7 w-7 text-sky-600" />
+                  </div>
+                  <div className="px-4 py-1.5 rounded-full bg-sky-50 text-sky-600 text-sm font-medium">
+                    +12% MoM
+                  </div>
+                </div>
+
+                <div className="space-y-7">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Patient Impact</h3>
+                    <p className="text-6xl font-bold text-sky-600 mt-3">1.2K+</p>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 font-medium">Satisfaction Rate</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="h-10 w-10 rounded-full bg-sky-50 flex items-center justify-center">
+                        <span className="text-sky-600 font-bold">78%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-7 pt-6 border-t border-gray-100">
+                  <Link 
+                    href="/impact" 
+                    className="inline-flex items-center text-sky-600 hover:text-sky-700 font-medium transition-colors group"
+                  >
+                    Read Patient Stories
+                    <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
             </div>
 
-            {/* Stats */}
-            <dl className="mt-12 grid grid-cols-3 gap-x-6">
-              <div>
-                <dt className="text-sm font-medium text-gray-500">Research Programs</dt>
-                <dd className="mt-2 text-3xl font-bold tracking-tight text-gray-900">50+</dd>
-              </div>
-              <div>
-                <dt className="text-sm font-medium text-gray-500">Global Reach</dt>
-                <dd className="mt-2 text-3xl font-bold tracking-tight text-gray-900">100+</dd>
-              </div>
-              <div>
-                <dt className="text-sm font-medium text-gray-500">Lives Improved</dt>
-                <dd className="mt-2 text-3xl font-bold tracking-tight text-gray-900">1M+</dd>
-              </div>
-            </dl>
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Link
+                href="#products"
+                className="inline-flex items-center rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-500 hover:shadow-lg hover:shadow-primary-500/30"
+              >
+                Explore our products
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Link>
+              <Link
+                href="#contact"
+                className="inline-flex items-center text-base font-semibold text-gray-900 transition-colors hover:text-gray-700"
+              >
+                Contact us <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
 
           {/* Right image */}
@@ -203,6 +268,20 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Products Section */}
+        <section id="products" className="relative isolate mt-32 sm:mt-56 sm:pt-32">
+          <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <BentoGrid />
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="relative isolate mt-32 sm:mt-56 sm:pt-32">
+          <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            {/* Contact content here */}
           </div>
         </section>
       </div>

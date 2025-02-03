@@ -106,3 +106,8 @@ body {
 .animate-float3 {
   animation: float3 10s ease-in-out infinite;
 }
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
